@@ -2,7 +2,7 @@
 
 	require_once('db.php');
 
-	$sql = 'INSERT INTO contacts (key, name, address, photo) VALUES ("'.bin2hex(random_bytes(8)).'", "'.$_POST['name'].'", "'.$_POST['address'].'", "'.$_POST['photo'].'")';
+	$sql = 'INSERT INTO contacts (`key`, `name`, `address`, `photo`) VALUES ("'.bin2hex(random_bytes(8)).'", "'.$_POST['name'].'", "'.$_POST['address'].'", "'.$_POST['photo'].'")';
 	if ($conn->query($sql) === TRUE) {
 	    $rows = array(
 			'status'		=> 1,
