@@ -2,7 +2,7 @@
 
 	require_once('db.php');
 
-	$sql = 'DELETE FROM contacts WHERE id="'.$_POST['id'].'")';
+	$sql = 'DELETE FROM contacts WHERE id="'.$_POST['id'].'"';
 	if ($conn->query($sql) === TRUE) {
 	    $rows = array(
 			'status'		=> 1,
